@@ -9,8 +9,8 @@
 #include "device_seed.h"
 
 // ---- EDIT THESE THREE LINES ----
-const char* WIFI_SSID = "iPhone nada";
-const char* WIFI_PASS = "nadou1234";
+const char* WIFI_SSID = "YOUR_WIFI_SSID";
+const char* WIFI_PASS = "YOUR_WIFI_PASSWORD";
 const char* HOST      = "172.20.10.7";   // laptop address (later: the Pi)
 // --------------------------------
 const uint16_t PORT = 8000;              // 8080 when going through the Pi proxy

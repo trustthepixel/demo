@@ -38,3 +38,13 @@
 - Commands executed and test results: Removal staged successfully. scripts/check.ps1 is absent from this repository; no firmware test/build script is available.
 - Decisions and assumptions: Remove the file from the repository and working tree, without changing the LED logic inside the primary firmware source.
 - Remaining work / exact stopping point: Run diff checks, commit and push the removal to origin/main, then confirm the remote tree.
+## [2026-11-03 21:00] Step P43: Publish prototype software and overview
+- Status: PARTIAL
+- Files created or modified: README.md, DEVELOPMENT_LOGS.md, tpx2-wifi-sat/firmware/tpx2_wifi_sat/tpx2_wifi_sat.ino, earthlens-p42-demo-software/.
+- Summary of work completed (3–8 lines):
+  - Added the P42 rogue-device simulator, verdict-light bridge, firmware sketches, runbook, and focused tests as a prototype source bundle.
+  - Added a root README describing packet flow, hardware, scenarios, setup, and repository limits.
+  - Replaced hardcoded Wi-Fi credentials in published firmware with local configuration placeholders.
+- Commands executed and test results: git diff --check passed. The demo repository lacks scripts/check.ps1 and does not include the tp runtime required by the added tests; no tests or firmware builds were run.
+- Decisions and assumptions: The new software bundle is kept together as delivered. Private device seed and trusted key files remain excluded.
+- Remaining work / exact stopping point: Review the staged paths and secret scan, then commit and push to origin/main. Previously published Wi-Fi credentials should be rotated because they appeared in repository history.
