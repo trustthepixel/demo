@@ -1,0 +1,5 @@
+trusted_keys/
+**/device_seed.h
+*.pem
+.env
+.leakwords
