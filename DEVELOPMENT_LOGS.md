@@ -48,3 +48,13 @@
 - Commands executed and test results: git diff --check passed. The demo repository lacks scripts/check.ps1 and does not include the tp runtime required by the added tests; no tests or firmware builds were run.
 - Decisions and assumptions: The new software bundle is kept together as delivered. Private device seed and trusted key files remain excluded.
 - Remaining work / exact stopping point: Review the staged paths and secret scan, then commit and push to origin/main. Previously published Wi-Fi credentials should be rotated because they appeared in repository history.
+## [2026-11-03 21:05] Step P43: Confirm prototype publication
+- Status: PARTIAL
+- Files created or modified: DEVELOPMENT_LOGS.md.
+- Summary of work completed (3–8 lines):
+  - Published the prototype software bundle and root README to origin/main as commit 21f89fc.
+  - Replaced hardcoded Wi-Fi credentials in the active sketches with local placeholders.
+  - Confirmed the staged tree excludes private device seeds, trusted key files, and PEM files.
+- Commands executed and test results: git diff --check and staged secret-file scan passed; push succeeded. No tests or firmware builds were run because the required runtime and build setup are absent from this repository.
+- Decisions and assumptions: Preserve the provided prototype source bundle and document its dependency on the full EARTHLENS runtime.
+- Remaining work / exact stopping point: The README and prototype code are published. Build/test verification remains for an environment with the full EARTHLENS runtime and board toolchains. Rotate Wi-Fi credentials that were present in earlier repository history.
