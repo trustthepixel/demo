@@ -1,4 +1,4 @@
-## [2026-11-03 01:00] Step P40: Publish demo projects
+## [2026-11-03 01:00] Step P40: demo projects
 - Status: PARTIAL
 - Files created or modified: .gitignore, DEVELOPMENT_LOGS.md.
 - Summary of work completed (3–8 lines):
