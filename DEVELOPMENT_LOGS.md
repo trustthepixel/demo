@@ -19,3 +19,13 @@
 - Commands executed and test results: Initial commit and push succeeded. scripts/check.ps1 is absent; no tests were run.
 - Decisions and assumptions: The user requested publication of the contents of Desktop/demo. Private key material was excluded.
 - Remaining work / exact stopping point: The source snapshot is published. The firmware seed header is excluded and must be provided through a secure local mechanism when building firmware.
+## [2026-11-03 20:30] Step P41: Update satellite firmware upload handling
+- Status: PARTIAL
+- Files created or modified: tpx2-wifi-sat/firmware/tpx2_wifi_sat/tpx2_wifi_sat.ino, DEVELOPMENT_LOGS.md.
+- Summary of work completed (3–8 lines):
+  - Added complete buffered writes for the packet header and image payload.
+  - Improved HTTP response parsing and require a successful structured response before advancing the chain.
+  - Added the configured chain reset at startup.
+- Commands executed and test results: git diff --check passed. The demo folder has no scripts/check.ps1 or firmware test/build script, so automated checks were unavailable.
+- Decisions and assumptions: The update applies to the explicitly specified firmware folder. Existing private key material remains excluded.
+- Remaining work / exact stopping point: Commit and push this firmware update to origin/main. Verify the remote branch after push.
