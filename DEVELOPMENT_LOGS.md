@@ -29,3 +29,12 @@
 - Commands executed and test results: git diff --check passed. The demo folder has no scripts/check.ps1 or firmware test/build script, so automated checks were unavailable.
 - Decisions and assumptions: The update applies to the explicitly specified firmware folder. Existing private key material remains excluded.
 - Remaining work / exact stopping point: Commit and push this firmware update to origin/main. Verify the remote branch after push.
+## [2026-11-03 20:45] Step P42: Remove standalone LED firmware
+- Status: PARTIAL
+- Files created or modified: tpx2-wifi-sat/firmware/tpx2_wifi_sat/led.ino, DEVELOPMENT_LOGS.md.
+- Summary of work completed (3–8 lines):
+  - Removed the standalone led.ino file from the repository as requested.
+  - Kept the primary satellite firmware source unchanged.
+- Commands executed and test results: Removal staged successfully. scripts/check.ps1 is absent from this repository; no firmware test/build script is available.
+- Decisions and assumptions: Remove the file from the repository and working tree, without changing the LED logic inside the primary firmware source.
+- Remaining work / exact stopping point: Run diff checks, commit and push the removal to origin/main, then confirm the remote tree.
